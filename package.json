@@ -1,6 +1,6 @@
 {
   "name": "web-research-agent-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "MCP server: company profiles, site audits and page-to-JSON for AI agents (via RapidAPI Web Research Agent API)",
   "type": "module",
   "bin": {
