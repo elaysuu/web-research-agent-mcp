@@ -1,0 +1,29 @@
+# MCPize manifest - https://mcpize.com
+version: 1
+name: web-research-agent-mcp
+description: 'Company profiles, site audits and page-to-JSON for AI agents.'
+runtime: typescript
+entry: index.js
+build:
+  install: npm install
+startCommand:
+  type: stdio
+  command: node
+  args:
+    - index.js
+# Hosted mode: set secrets WRA_DIRECT_URL and WRA_DIRECT_TOKEN in the MCPize dashboard (not committed).
+pricing:
+  protocol: x402
+  network: base
+  recipient: "0x8a9b5bb721454410cd1ECe80Ec6AeFBDEFeAdc7f"
+  asset: usdc
+  tools:
+    - name: company_profile
+      price: "0.02"
+      description: Company profile from a website
+    - name: site_audit
+      price: "0.02"
+      description: SEO, performance, security-header and broken-link audit
+    - name: page_to_json
+      price: "0.01"
+      description: Web page to structured JSON

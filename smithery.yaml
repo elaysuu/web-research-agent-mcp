@@ -1,0 +1,11 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: [rapidApiKey]
+    properties:
+      rapidApiKey:
+        type: string
+        description: Your RapidAPI key (subscribe to Web Research Agent API, free plan available)
+  commandFunction: |-
+    (config) => ({ command: 'node', args: ['index.js'], env: { RAPIDAPI_KEY: config.rapidApiKey } })
