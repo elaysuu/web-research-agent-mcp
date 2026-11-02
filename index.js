@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 // Thin MCP wrapper. Two modes:
 //  - RapidAPI mode (default): set RAPIDAPI_KEY to your own RapidAPI key (Free plan available).
-//  - Direct mode (hosted deployments, e.g. MCPize pay-per-call): set WRA_DIRECT_URL + WRA_DIRECT_TOKEN.
+//  - Direct mode (hosted deployments, e.g. MCPize pay-per-call): set WRA_DIRECT_TOKEN (WRA_DIRECT_URL optional).
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 const HOST = process.env.RAPIDAPI_HOST || 'web-research-agent-api.p.rapidapi.com';
 const KEY = process.env.RAPIDAPI_KEY;
-const DURL = (process.env.WRA_DIRECT_URL || '').replace(/\/+$/, '');
+const DURL = (process.env.WRA_DIRECT_URL || 'https://web-research-agent-api.elayosetrov78.workers.dev').replace(/\/+$/, '');
 const DTOK = process.env.WRA_DIRECT_TOKEN;
 const DIRECT = !!(DURL && DTOK);
 async function call(path, params) {
