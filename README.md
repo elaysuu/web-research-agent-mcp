@@ -1,5 +1,5 @@
 # web-research-agent-mcp
-MCP server that gives Claude, Cursor or any MCP client three research tools: `company_profile`, `site_audit` and `page_to_json`.
+MCP server that gives Claude, Cursor or any MCP client six research tools: `company_profile`, `site_audit`, `page_to_json`, `email_check`, `sitemap_urls` and `page_diff`.
 It is backed by the [Web Research Agent API](https://rapidapi.com/Elayosetrov/api/web-research-agent-api) on RapidAPI. **You need your own RapidAPI key.** The free plan gives you 50 calls/month.
 
 ## Setup
@@ -12,6 +12,9 @@ It is backed by the [Web Research Agent API](https://rapidapi.com/Elayosetrov/ap
 - `company_profile(url)`: name, description, logo, socials, emails, key pages, price mentions, tech stack.
 - `site_audit(url, max_links?)`: 0–100 score, SEO, performance, security-header and broken-link issues.
 - `page_to_json(url, max_text?)`: meta, OG, JSON-LD, headings, links, images, clean text.
+- `email_check(email? | domain?)`: syntax, MX/null-MX, SPF, DMARC policy, disposable/free/role flags, verdict and 0–100 score (live DNS, no SMTP probe).
+- `sitemap_urls(url, limit?, max_sitemaps?, since?)`: every URL a site publishes in its sitemaps, with lastmod; `since` returns only changed pages.
+- `page_diff(url, previous_text? | previous_hash?, selector?)`: content hash plus added/removed lines since your last check — a stateless change monitor.
 
 The crawler respects robots.txt and refuses private and internal addresses. MIT license.
 

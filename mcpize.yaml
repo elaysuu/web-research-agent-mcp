@@ -1,7 +1,7 @@
 # MCPize manifest - https://mcpize.com
 version: 1
 name: web-research-agent-mcp
-description: 'Company profiles, site audits and page-to-JSON for AI agents.'
+description: 'Company profiles, site audits, page-to-JSON, email/domain checks, sitemap URL lists and page change diffs for AI agents.'
 runtime: typescript
 entry: index.js
 build:
@@ -27,3 +27,12 @@ pricing:
     - name: page_to_json
       price: "0.01"
       description: Web page to structured JSON
+    - name: email_check
+      price: "0.01"
+      description: Email/domain validation via live DNS (MX, SPF, DMARC, disposable)
+    - name: sitemap_urls
+      price: "0.01"
+      description: Site URL inventory from sitemaps with lastmod filter
+    - name: page_diff
+      price: "0.02"
+      description: Page change monitor - content hash and added/removed lines
