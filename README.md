@@ -20,3 +20,8 @@ The crawler respects robots.txt and refuses private and internal addresses. MIT 
 
 ## Hosted / pay-per-call
 Also available hosted on [MCPize](https://mcpize.com) with pay-per-call pricing (no RapidAPI key needed). Self-hosters of the backend can use direct mode with env `WRA_DIRECT_URL` and `WRA_DIRECT_TOKEN`.
+
+## Also by the author
+
+- [AI Agent Prompt Pack](https://payhip.com/b/6JvM8?utm_source=github&utm_medium=readme&utm_campaign=web-research-agent-mcp): prompts for research and tool-using agents (source citing, fact-checking, guardrails). $9 on Payhip, or 9 USDC on Base at [Setrov Store](https://setrov-store.elayosetrov78.workers.dev).
+- Other products (game textures, kids printables): [Setrov Studio on Payhip](https://payhip.com/SetrovStudio?utm_source=github&utm_medium=readme&utm_campaign=web-research-agent-mcp).
