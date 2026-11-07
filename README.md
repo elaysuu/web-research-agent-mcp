@@ -1,4 +1,7 @@
 # web-research-agent-mcp
+
+[![M8ven Verified](https://m8ven.ai/badge/mcp/elaysuu-web-research-agent-mcp-131b0f?variant=verified&v=43d272d372f6d0b36ef1dd95c5d23611)](https://m8ven.ai/mcp/elaysuu-web-research-agent-mcp-131b0f?s=readme)
+
 MCP server that gives Claude, Cursor or any MCP client six research tools: `company_profile`, `site_audit`, `page_to_json`, `email_check`, `sitemap_urls` and `page_diff`.
 It is backed by the [Web Research Agent API](https://rapidapi.com/Elayosetrov/api/web-research-agent-api) on RapidAPI. **You need your own RapidAPI key.** The free plan gives you 50 calls/month.
 
